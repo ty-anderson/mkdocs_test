@@ -1,0 +1,4 @@
+site_name: Test Docs for PACS Data Team
+nav:
+  - Home: index.md
+  - About: about.md
