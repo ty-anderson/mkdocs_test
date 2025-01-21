@@ -1,3 +1,8 @@
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+
 # Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
@@ -15,3 +20,13 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+
+<div class="mermaid">
+graph TD
+    A[Start] --> B{Is it working?}
+    B -- Yes --> C[Great!]
+    B -- No --> D[Debug]
+    D --> B
+    Z@{ shape: manual-file, label: "File Handling"}
+</div>
