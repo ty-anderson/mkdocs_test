@@ -93,6 +93,10 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
 <p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
 <h2 id="commands">Commands</h2>
@@ -107,7 +111,15 @@
 docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
-</code></pre></div>
+</code></pre>
+<div class="mermaid">
+graph TD
+    A[Start] --> B{Is it working?}
+    B -- Yes --> C[Great!]
+    B -- No --> D[Debug]
+    D --> B
+    Z@{ shape: manual-file, label: "File Handling"}
+</div></div>
             </div>
         </div>
 
@@ -121,6 +133,7 @@ docs/
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="js/base.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
         <script src="search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
@@ -189,5 +202,5 @@ docs/
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-01-20 23:50:15.410774+00:00
+Build Date UTC : 2025-01-21 03:41:48.045473+00:00
 -->

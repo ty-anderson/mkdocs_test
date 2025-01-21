@@ -86,7 +86,15 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="this-is-a-test-page">This is a test page</h1>
-<p>Testing is very important to do before making big decisions</p></div>
+<p>Testing is very important to do before making big decisions</p>
+<div class="mermaid">
+graph TD
+    A[Start] --> B{Is it working?}
+    B -- Yes --> C[Great!]
+    B -- No --> D[Debug]
+    D --> B
+
+</div></div>
             </div>
         </div>
 
@@ -100,6 +108,7 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../js/base.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
         <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
