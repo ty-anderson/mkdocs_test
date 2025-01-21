@@ -194,3 +194,16 @@ graph TD
 
 Version 2 gives more control but requires syntax in html tags.
 
+## Adding a Theme
+
+To change the theme, use the ``mkdocs.yml`` file.
+
+```yaml
+theme: theme-name
+```
+
+The most popular theme is the material theme. Install this with ``pip install mkdocs-material``
+
+```yaml
+theme: material
+```
