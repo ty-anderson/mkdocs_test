@@ -2,7 +2,7 @@
 
 Mermaid is a JavaScript library that allows for building diagrams as code. 
 
-Mermaid official docs: https://mermaid.js.org/intro/
+Mermaid official docs: [https://mermaid.js.org/intro/](https://mermaid.js.org/intro/)
 
 ## Version 1
 
