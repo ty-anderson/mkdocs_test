@@ -32,3 +32,50 @@ nav:
 
 If you're connected to GitHub, you can build and deploy into a separate branch
 with one command ``mkdocs gh-deploy``
+
+
+### Other Items
+
+#### Generate a PDF with:
+
+Install the Plugin: ``pip install mkdocs-pdf-export-plugin``
+
+Modify mkdocs.yml: Add the plugin to your MkDocs configuration file:
+
+```yaml
+plugins:
+  - pdf-export
+```
+
+If you're using other plugins, ensure you list them as well.
+
+Build the PDF: Run the following command to build the documentation and export the PDF:
+
+``mkdocs build``
+
+The PDF will be generated and placed in the site/pdf/ directory.
+
+#### Use Mermaid Charts
+
+``pip install mkdocs-mermaid2-plugin``
+
+Update config:
+
+```yaml
+plugins:
+  - search
+  - mermaid2
+```
+
+Write your mermaid markdown
+
+```markdown
+# Mermaid Example
+
+```mermaid
+graph TD
+    A[Start] --> B{Is it working?}
+    B -- Yes --> C[Great!]
+    B -- No --> D[Debug]
+    D --> B
+```
