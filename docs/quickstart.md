@@ -1,9 +1,9 @@
 # Getting started with MKDocs
 
 1. Create a python project.
-2. Create a venv and activate it. \
-    Windows: ``venv\Scripts\activate`` \
-    MacOS/Linux: ``venv/bin/activate``
+2. Create a venv and activate it. 
+    - Windows: ``venv\Scripts\activate``
+    - MacOS/Linux: ``venv/bin/activate``
 
 3. Once activated, ``pip install mkdocs``
 4. Next create the project with ``mkdocs new .`` which creates a yml file.
