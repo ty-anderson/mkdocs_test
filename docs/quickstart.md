@@ -144,14 +144,13 @@ Then you can use the CSS tags in the HTML elements.
     </tr>
 </table>
 
-
 ### Images
 
 Add images by using this syntax ``![Text to describe image](./path/to/file.png)``
 
 For example: ``![Excel Access](./images/Excel Access.png)``
 
-#### Spacing
+### Spacing
 
 You can use HTML to add custom spacing in the docs:
 
@@ -187,66 +186,5 @@ Build the PDF: Run the following command to build the documentation and export t
 
 The PDF will be generated and placed in the site/pdf/ directory.
 
-## Use Mermaid Charts
 
-### Version 1
-
-``pip install mkdocs-mermaid2-plugin``
-
-Update config:
-
-```yaml
-plugins:
-  - search
-  - mermaid2
-```
-
-Write your mermaid markdown
-
-```markdown
-# Mermaid Example
-
-```mermaid
-graph TD
-    A[Start] --> B{Is it working?}
-    B -- Yes --> C[Great!]
-    B -- No --> D[Debug]
-    D --> B
-```
-
-Version 1 is limits you to a certain version of Mermaid. This means you can't use the 
-new shapes introduced in version 11.3.0+
-[https://mermaid.js.org/syntax/flowchart.html#expanded-node-shapes-in-mermaid-flowcharts-v11-3-0](https://mermaid.js.org/syntax/flowchart.html#expanded-node-shapes-in-mermaid-flowcharts-v11-3-0)
-
-### Version 2
-
-Update config:
-
-```yaml
-extra_javascript:
-  - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
-```
-
-Add the import into index.md
-
-```markdown
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
-```
-
-Write your mermaid
-
-```html
-<div class="mermaid">
-graph TD
-    A[Start] --> B{Is it working?}
-    B -- Yes --> C[Great!]
-    B -- No --> D[Debug]
-    D --> B
-    Z@{ shape: manual-file, label: "File Handling"}
-</div>
-```
-
-Version 2 gives more control but requires syntax in html tags.
 

@@ -2,6 +2,7 @@ site_name: Test Docs for PACS Data Team
 nav:
   - Home: index.md
   - Quickstart: quickstart.md
+  - Diagrams: diagrams.md
   - About: about.md
   - Access Excel: access_excel.md
 extra_css:
