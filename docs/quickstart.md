@@ -11,13 +11,15 @@
 You now have your project setup. You can create and edit markdown files 
 in the ``/docs`` directory.
 
-### Commands:
+## Commands
 
-``mkdocs serve`` - generate hot reloading docs to access and view \
+``mkdocs serve`` - generate hot reloading docs to access and view
+
 ``mkdocs build`` - generate the files in a directory called ``/site``
 
-To add configuration and navigation, edit the ``mkdocs.yml`` file. The only required
-field in this is ``site_name``.
+To add configuration and navigation, edit the ``mkdocs.yml`` file. 
+
+The only required field in this is ``site_name``.
 
 Add nav:
 
@@ -28,17 +30,15 @@ nav:
   - About: about.md
 ```
 
-### Deploy:
+## Deploy
 
 If you're connected to GitHub, you can build and deploy into a separate branch
-with one command ``mkdocs gh-deploy``
+with one command ``mkdocs gh-deploy``. This will build and load the docs to a separate branch
+in the repo, which can then be setup in GitHub pages to build on every push.
 
+## Writing Docs
 
-### Other Items
-
-#### Writing Docs
-
-##### Tables
+### Tables
 
 You can write markdown or html tags into each page.
 
@@ -87,14 +87,71 @@ or like this
     </tr>
 </table>
 
+HTML is nice because you can add custom styling both inline, and through stylesheets.
 
-##### Images
+In ``mkdocs.yml`` add
+
+```yaml
+extra_css:
+  - css/main.css
+```
+
+Then create a directory inside of ``/docs`` you can call it anything but we'll call it ``css``. Create a stylesheet called ``main.css``.
+
+```css
+.bold-rows thead tr td {
+    font-weight: bold;
+    padding: 2px 10px;
+}
+
+.center-table-vals td {
+    align-content: center;
+    text-align: center;
+}
+```
+
+Then you can use the CSS tags in the HTML elements.
+
+```html
+<table class="bold-rows center-table-vals" style="background-color: aqua">
+        <thead>
+            <tr>
+                <td>Column 1</td>
+                <td>Column 2</td>
+                <td>Column 3</td>
+            </tr>
+        </thead>
+    <tr>
+        <td>Value 1</td>
+        <td>Value 2</td>
+        <td>Value 3</td>
+    </tr>
+</table>
+```
+
+<table class="bold-rows center-table-vals" style="background-color: aqua">
+        <thead>
+            <tr>
+                <td>Column 1</td>
+                <td>Column 2</td>
+                <td>Column 3</td>
+            </tr>
+        </thead>
+    <tr>
+        <td>Value 1</td>
+        <td>Value 2</td>
+        <td>Value 3</td>
+    </tr>
+</table>
+
+
+### Images
 
 Add images by using this syntax ``![Text to describe image](./path/to/file.png)``
 
 For example: ``![Excel Access](./images/Excel Access.png)``
 
-##### Spacing
+#### Spacing
 
 You can use HTML to add custom spacing in the docs:
 
@@ -103,14 +160,13 @@ You can use HTML to add custom spacing in the docs:
 <hr>
 ```
 
+## Generate a PDF
 
-#### Generate a PDF with:
-
-##### Version 1:
+### Version 1
 
 Print to PDF from web app. Does a pretty good job with formatting.
 
-##### Version 2:
+### Version 2
 
 UNTESTED
 
@@ -131,9 +187,9 @@ Build the PDF: Run the following command to build the documentation and export t
 
 The PDF will be generated and placed in the site/pdf/ directory.
 
-#### Use Mermaid Charts
+## Use Mermaid Charts
 
-###### Version 1:
+### Version 1
 
 ``pip install mkdocs-mermaid2-plugin``
 
@@ -162,7 +218,7 @@ Version 1 is limits you to a certain version of Mermaid. This means you can't us
 new shapes introduced in version 11.3.0+
 [https://mermaid.js.org/syntax/flowchart.html#expanded-node-shapes-in-mermaid-flowcharts-v11-3-0](https://mermaid.js.org/syntax/flowchart.html#expanded-node-shapes-in-mermaid-flowcharts-v11-3-0)
 
-##### Version 2:
+### Version 2
 
 Update config:
 

@@ -1,6 +1,11 @@
 site_name: Test Docs for PACS Data Team
 nav:
   - Home: index.md
+  - Quickstart: quickstart.md
   - About: about.md
+  - Access Excel: access_excel.md
+extra_css:
+  - css/main.css
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+theme: material
