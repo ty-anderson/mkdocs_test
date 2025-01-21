@@ -1,0 +1,9 @@
+.bold-rows thead tr td {
+    font-weight: bold;
+    padding: 2px 10px;
+}
+
+.center-table-vals td {
+    align-content: center;
+    text-align: center;
+}
