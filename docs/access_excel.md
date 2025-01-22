@@ -21,3 +21,5 @@ When you're ready to convert to CUBE formulas, go to:
 ![Convert to Formulas](./images/Using%20the%20Model%20in%20a%20Pivot%20Table.png)
 
 After a few seconds you should be able to move the formulas around to build your spreadsheet out.
+
+You'll also need to login once you connect.
